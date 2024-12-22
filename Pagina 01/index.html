@@ -38,14 +38,14 @@
                 </h2>
                 <h2>
                     <span>
-                        Potência Máxima 
+                        Potência Máxima
                     </span>
                     <br>
                     329cv
                 </h2>
             </div>
             <div class="slides">
-                  <h2>
+                <h2>
                     <span>
                         0-100 km/h
                     </span>
@@ -59,7 +59,7 @@
                     <br>
                     600 km
                 </h2>
-              
+
             </div>
             <div class="slides">
                 <h2>
@@ -71,7 +71,7 @@
                 </h2>
                 <h2>
                     <span>
-                        Capacidade de Bateria 
+                        Capacidade de Bateria
                     </span>
                     <br>
                     72.6 kwh
@@ -108,27 +108,31 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 
-        <script>
-            const slides = document.querySelectorAll(".slides");
-            const dots = document.querySelectorAll(".dot");
+    <script>
+        const slides = document.querySelectorAll(".slides");
+        const dots = document.querySelectorAll(".dot");
 
-            function setActive(i) {
-                for (slide of slides){
-                    slide.classList.remove('active');
-                    slides[i].classList.add('active');
-                }
-                for (dot of dots){
-                    dot.classList.remove('active');
-                    dots[i].classList.add('active');
-                }
-                for(let j = 0; j < dots.length; j++){
-                    dots[j].addEventListener('click', () => {
-                        console.log(j);
-                        setActive(j);
-                    })
-                }
+        function setActive(i) {
+            console.log(i)
+            for (slide of slides) {
+                slide.classList.remove('active');
+                slides[i].classList.add('active');
             }
-        </script>
+
+            for (dot of dots) {
+                dot.classList.remove('active');
+                dots[i].classList.add('active');
+            }
+        }
+
+
+        for (let j = 0; j < dots.length; j++) {
+            dots[j].addEventListener('click', () => {
+                setActive(j);
+            })
+        }
+
+    </script>
 </body>
 
 </html>
